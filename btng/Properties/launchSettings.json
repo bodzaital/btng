@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "btng": {
-      "commandName": "Project",
-      "commandLineArgs": "--scene new scene0",
-      "workingDirectory": "D:\\Xampp\\htdocs\\btif\\btng\\bin\\Debug\\net5.0\\proj"
-    }
-  }
-}
