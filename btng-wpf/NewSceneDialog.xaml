@@ -1,0 +1,82 @@
+﻿<Window x:Class="btng_wpf.NewSceneDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:btng_wpf"
+        mc:Ignorable="d"
+        FontFamily="Inter"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        Title="New scene" WindowStartupLocation="CenterScreen">
+    <StackPanel Orientation="Vertical">
+        <Grid Margin="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Content="New Scene"
+                   HorizontalAlignment="Center"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Margin="0,10,0,10"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="1"
+                Content="Title:"
+                Margin="0,0,10,0"/>
+            <TextBox Grid.Column="1"
+                     Grid.Row="1"
+                     Margin="0,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Name="SceneTitleText"/>
+            <Label Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="2"
+                   Content="This will be the title of the scene."
+                   Foreground="DarkGray" 
+                   FontStyle="Italic"
+                   Margin="10,0,10,0"
+                   HorizontalAlignment="Center"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="4"
+                Content="Name:"
+                Margin="0,0,10,0"/>
+            <TextBox Grid.Column="1"
+                     Grid.Row="4"
+                     Margin="0,0,0,0"
+                     VerticalContentAlignment="Center"
+                     Name="SceneNameText"/>
+            <Label Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="5"
+                   Content="This will be the id of the scene."
+                   Foreground="DarkGray" 
+                   FontStyle="Italic"
+                   Margin="10,0,10,0"
+                   HorizontalAlignment="Center"/>
+
+            
+        </Grid>
+        <Button Content="Save"
+                HorizontalAlignment="Center"
+                Margin="0,10,0,20"
+                Padding="10,4"
+                Click="NewSceneButton"/>
+    </StackPanel>
+</Window>

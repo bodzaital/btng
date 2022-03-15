@@ -1,0 +1,35 @@
+﻿<Window x:Class="btng_wpf.OpenProjectDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:btng_wpf"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        FontFamily="Inter"
+        SizeToContent="WidthAndHeight"
+        SnapsToDevicePixels="True"
+        
+        Title="Open project" Closing="WindowClosing">
+    <StackPanel Orientation="Vertical">
+        <Label Content="Open project" Name="CreateOpenHeader" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="0,10,0,10" />
+        <StackPanel Orientation="Horizontal" Margin="10,0,10,20" Name="OpenProjectPanel">
+            <Button Content="Browse"
+                    Padding="10,0"
+                    Margin="0,0,10,0"
+                    Click="BrowseProjectButtonClick" />
+            <Label Name="BrowseLabel"
+                   Content="Choose project to open."
+                   Width="200" />
+        </StackPanel>
+        <Button Name="CreateOpenButton" 
+                Content="Open"
+                IsEnabled="False"
+                Margin="10,0,10,20"
+                Padding="10,4"
+                HorizontalAlignment="center"
+                Click="CreateButtonClick" />
+    </StackPanel>
+</Window>
